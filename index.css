@@ -1,0 +1,297 @@
+/* Auth.css - Нэвтрэх болон бүртгүүлэх формны стиль */
+
+/* Үндсэн кард стиль */
+.auth-card {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Бүртгүүлэх кард өргөн */
+.register-card {
+  max-width: 450px;
+}
+
+/* Гарчиг */
+.auth-card h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Форм групп */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Лейбл */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Инпут талбарууд */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+/* Инпут фокус үед */
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+/* Алдаатай инпут */
+.form-group input.error {
+  border-color: #ff4d4f;
+}
+
+/* Идэвхгүй инпут */
+.form-group input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Чекбокс групп */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Чекбокс лейбл */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: normal !important;
+}
+
+/* Чекбокс инпут */
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Чекбокс линк */
+.checkbox-label a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* Алдааны мэдээлэл */
+.error-message {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Ерөнхий алдаа */
+.general-error {
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #ff4d4f;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Илгээх товч */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+/* Илгээх товч hover */
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Илгээх товч идэвхгүй */
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Мартсан нууц үг */
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #667eea;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Горим солих хэсэг */
+.toggle-mode {
+  margin-top: 25px;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* Горим солих товч */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* Анимаци */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Респонсив дизайн */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+  
+  .auth-card h2 {
+    font-size: 24px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+  }
+}
+
+/* Нэмэлт сайжруулалтууд */
+.input-hint {
+  color: #999;
+  font-size: 12px;
+  margin-top: 3px;
+  display: block;
+}
+
+/* Нууц үгийн хүч чадлын индикатор */
+.password-strength {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.password-strength.weak {
+  color: #ff4d4f;
+}
+
+.password-strength.medium {
+  color: #faad14;
+}
+
+.password-strength.strong {
+  color: #52c41a;
+}
+
+/* Сошиал медиа нэвтрэлт (хэрэгтэй бол) */
+.social-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-login p {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #eee;
+}
+
+.social-login p::before {
+  left: 0;
+}
+
+.social-login p::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  background: #f5f5f5;
+}
